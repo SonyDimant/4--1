@@ -35,6 +35,29 @@
         }
         Console.WriteLine();
     }
+    public void ApplyToAll(Func<T, T> action)
+    {
+        for(int i =0; i<_size; i++)
+        {
+            massive[i] = action(massive[i]);
+        }
+    }
+    public void Reverse()
+    {
+        T[] values = new T[_size];
+        int c =0;
+        for (int i = _size; i >0; i--)
+        {
+            values[c] = massive[i];
+            c++;
+        }
+        for (int i = 0; i < _size; i++)
+        {
+            massive[i] = values[i];
+        }
+    }
+
+
 
     public void DeleteElem(int index)
     {
