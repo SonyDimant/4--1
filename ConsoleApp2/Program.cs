@@ -15,6 +15,7 @@
         OneDmassive<double> doublearray = new();
         doublearray.Print();
         intarray.Countel();
+        intarray.ForEachAct((i) => Console.WriteLine(i) );
         intarray.Print();
         intarray.Add(6);
         intarray.Print();
