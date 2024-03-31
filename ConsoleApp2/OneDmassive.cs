@@ -75,6 +75,13 @@
         }
         return false;
     }
+    public void ForEachAct(Action<T> action)
+    {
+        for (int i = 0; i < _size; i++)
+        {
+            action(massive[i]);
+        }
+    }
 
     public bool IfAll(Func<T, bool> action) 
     {
